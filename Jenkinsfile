@@ -5,7 +5,7 @@ pipeline {
         stage('Docker Push') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'DockerHub-mosazhaw', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+                    withCredentials([usernamePassword(credentialsId: 'abzhaw', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                         sh '''
                             export DOCKER_HOST=tcp://host.docker.internal:2375
                             docker login -u $USERNAME -p $PASSWORD
